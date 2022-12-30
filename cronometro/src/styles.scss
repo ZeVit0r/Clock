@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #8ecae6;
+}
+
+.content {
+    width: 320px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .clock {
+        height: 220px;
+        width: 220px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .clock-progress {
+            position: fixed;
+
+            height: 220px;
+            width: 220px;
+            
+            border-radius: 50%;
+
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        .clock-center {
+            position: fixed;
+
+            background-color: #219ebc;
+            height: 200px;
+            width: 200px;
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            border-radius: 100%;
+
+            h1 {
+                font-size: 56px;
+                color: #001c2a;
+            }
+        }
+    
+    }
+    
+    .content-buttons {
+        margin-top: 24px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    
+        .button-clock{
+            cursor: pointer;
+
+            height: 48px;
+            width: 96px;
+
+            background-color: #023047;
+            color: #fff;
+
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+
+            border-radius: 4px;
+            border: none;
+
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+            transition: filter 0.5s ease-in-out;
+            &:hover {
+                filter: brightness(1.4);
+            }
+        }
+
+        .button-disabled {
+            cursor: default;
+            background-color: #023047;
+            
+            height: 48px;
+            width: 96px;
+            
+            color: #fff;
+            
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            
+            border-radius: 4px;
+            border: none;
+            
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+            transition: filter 0.2s ease-in-out;
+            filter: opacity(0.5);
+        }
+
+        
+    }
+}
